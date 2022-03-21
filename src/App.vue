@@ -1,32 +1,99 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+  <div>
+    <!-- 头部导航 -->
+    <van-nav-bar title="蓝色技术工作室" left-text="返回" fixed>
+      <template #left>
+      <img src="./assets/avatar.png" alt=""/>
+    </template>
+
+      <template #right>
+        <!--        <el-button @click="drawer = true"  type="primary" style="margin-left: 16px;">-->
+        <!--          菜单-->
+        <!--        </el-button>-->
+        <van-icon name="ellipsis" @click="drawer = true" size="25px"/>
+      </template>
+
+    </van-nav-bar>
+    <el-drawer
+        title="我是标题"
+        :visible.sync="drawer"
+        :with-header="false"
+        size="200px"
+    >
+      <van-cell-group class="action-card">
+        <div class="v-cell_box">
+          <van-cell icon="chat-o" title="小思同学" is-link to="/robot"/>
+          <van-cell icon="user-circle-o" title="关于我们" is-link to="/about"/>
+          <van-cell icon="envelop-o" title="联系我们"  to="/contact" is-link/>
+          <van-cell icon="home-o" title="返回主页" is-link to="/"/>
+          <van-cell  icon="like-o" title="我的学校" is-link url="https://www.jxut.edu.cn/" />
+        </div>
+        <div class="bottom_box">
+
+          <img src="./assets/gzh.png" alt="">
+          <br>
+          <span>扫码关注蓝色技术公众号</span>
+        </div>
+      </van-cell-group>
+    </el-drawer>
+    <router-view></router-view>
+
+    <!-- 底部 -->
+    <!--    <van-tabbar v-model="active" fixed>
+          <van-tabbar-item icon="wap-home" to="/">主页</van-tabbar-item>
+
+          <van-tabbar-item icon="wap-nav" to="/user">我们</van-tabbar-item>
+        </van-tabbar>-->
   </div>
 </template>
 
-<style lang="less">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+export default {
+  data() {
+    return {
+      active: 0,
+      drawer: false,
+    };
+  },
+};
+</script>
+
+<style scoped lang="less">
+.van-nav-bar {
+  margin: 0px auto;
+  //background-color: #208ce6;
+
+  border-bottom: 1px solid skyblue;
 }
 
-#nav {
-  padding: 30px;
+.van-nav-bar__title {
+  //color: white;
+}
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+// 顶部左侧图片
+.van-nav-bar__left img {
+  width:32px;
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+}
+
+// 侧边栏距离顶部
+.v-cell_box {
+  margin-top: 30%;
+}
+
+// 公众号部分
+.bottom_box {
+  margin: 20% auto;
+  width: 100%;
+  height: 200px;
+  //background-color: #ccc;
+
+  text-align: center;
+  font-size: 12px;
+}
+
+.bottom_box img {
+  border-radius: 1px;
+  width: 70%;
 }
 </style>
