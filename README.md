@@ -1,19 +1,17 @@
-# unknow
+# 蓝色技术工作室
 
-## Project setup
+## 进入unknow目录
 ```
-npm install
+cd unknow
 ```
-
-### Compiles and hot-reloads for development
+## 命令行输入 安装
 ```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
+ npm install 
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+###  启动服务器
+```
+npm run serve 
+```
+
+### 启动成功后输入网址访问
