@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <div class="App_box">
     <!-- 头部导航 -->
     <van-nav-bar title="蓝色技术工作室" left-text="返回" fixed>
       <template #left>
-      <img src="./assets/avatar.png" alt=""/>
-    </template>
+        <img src="./assets/avatar.png" alt=""/>
+      </template>
 
       <template #right>
         <!--        <el-button @click="drawer = true"  type="primary" style="margin-left: 16px;">-->
@@ -24,9 +24,9 @@
         <div class="v-cell_box">
           <van-cell icon="chat-o" title="小思同学" is-link to="/robot"/>
           <van-cell icon="user-circle-o" title="关于我们" is-link to="/about"/>
-          <van-cell icon="envelop-o" title="联系我们"  to="/contact" is-link/>
+          <van-cell icon="envelop-o" title="联系我们" to="/contact" is-link/>
           <van-cell icon="home-o" title="返回主页" is-link to="/"/>
-          <van-cell  icon="like-o" title="我的学校" is-link url="https://www.jxut.edu.cn/" />
+          <van-cell icon="like-o" title="我的学校" is-link url="https://www.jxut.edu.cn/"/>
         </div>
         <div class="bottom_box">
 
@@ -59,10 +59,14 @@ export default {
 </script>
 
 <style scoped lang="less">
-.van-nav-bar {
-  margin: 0px auto;
-  //background-color: #208ce6;
+.App_box {
 
+}
+
+
+.van-nav-bar {
+  margin: 0 auto;
+  //background-color: #208ce6;
   border-bottom: 1px solid skyblue;
 }
 
@@ -72,7 +76,7 @@ export default {
 
 // 顶部左侧图片
 .van-nav-bar__left img {
-  width:32px;
+  width: 32px;
 
 }
 
