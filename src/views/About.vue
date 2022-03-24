@@ -1,6 +1,18 @@
 <template>
 
   <div class="about_box">
+    <van-notice-bar left-icon="volume-o" :scrollable="false" scrollable  color="#1989fa"  background="#ecf9ff"      mode="closeable"  speed="100">
+      <van-swipe
+          vertical
+          class="notice-swipe"
+          :autoplay="3000"
+          :show-indicators="false"
+
+      >
+        <van-swipe-item>勤洗手，戴口罩，常通风，多消毒，有症状，早就医，讲卫生，多锻炼，少出行，少聚集，多理解，多配合，需警惕，不恐慌，疫情防控，切勿松懈。</van-swipe-item>
+      </van-swipe>
+    </van-notice-bar>
+
     <div class="logo_box">
       <img src="../assets/lsjs.jpg" alt="">
     </div>
@@ -37,15 +49,19 @@
 </script>
 
 <style scoped>
-
+.notice-swipe {
+  height: 40px;
+  line-height: 40px;
+}
 .about_box {
   max-width: 450px;
-  margin: 65px auto;
+  margin: 46px auto;
 }
 
 .logo_box {
+  padding-top: 10px;
   text-align: center;
-  margin: 20px auto 0 auto;
+  margin: 30px auto 0 auto;
   width: 50%;
   height: 100px;
   border-bottom: 1px solid #ccc;

@@ -1,6 +1,20 @@
 <template>
   <div class="activity">
+    <van-notice-bar left-icon="volume-o" :scrollable="false"  color="#1989fa"  background="#ecf9ff"      mode="closeable"  speed="100">
+      <van-swipe
+          vertical
+          class="notice-swipe"
+          :autoplay="3000"
+          :show-indicators="false"
+      >
+        <van-swipe-item>病毒无情，人间有情</van-swipe-item>
+        <van-swipe-item>疫情终会过去，静候春暖花开</van-swipe-item>
+        <van-swipe-item>抗击疫情，人人有责</van-swipe-item>
+        <van-swipe-item>齐心合力，共康疫情</van-swipe-item>
 
+
+      </van-swipe>
+    </van-notice-bar>
     <i class="el-icon-date">2021-12-22</i>
     <br>
     <img src="../../assets/Activity/Active02_img_01.png" alt="">
@@ -80,8 +94,12 @@ export default {
 </script>
 
 <style lang="less" scoped>
+.notice-swipe {
+  height: 40px;
+  line-height: 40px;
+}
 .activity {
-  margin: 60px auto 0 auto;
+  margin: 46px auto 0 auto;
   max-width: 450px;
   text-align: center;
 

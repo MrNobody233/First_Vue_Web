@@ -1,9 +1,11 @@
 <template>
+
   <div class="App_box">
+
     <!-- 头部导航 -->
-    <van-nav-bar title="蓝色技术工作室" left-text="返回" fixed>
+    <van-nav-bar title="蓝色技术工作室" left-text="返回" fixed style="">
       <template #left>
-        <img src="./assets/avatar.png" alt=""/>
+        <img src="./assets/avatar.png" alt="" @click="back"/>
       </template>
 
       <template #right>
@@ -48,16 +50,29 @@ export default {
       drawer: false,
     };
   },
+  methods: {
+    back() {
+      this.$router.go(-1);
+
+    }
+  }
 };
 </script>
 
 <style scoped lang="less">
 .App_box {
-
+  background-color: #f8f8f8;
+  max-width: 450px;
+  margin: 0 auto;
 }
 
 
 .van-nav-bar {
+  max-width: 450px;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%, -50%);
   margin: 0 auto;
   //background-color: #208ce6;
   border-bottom: 1px solid skyblue;

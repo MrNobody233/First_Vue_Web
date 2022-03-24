@@ -3,12 +3,13 @@
     <div class="content-box">
       <div class="content-font">
         <p>{{ active_font }}</p>
-        <br><br>
+        <br>
         <span>{{ active_type }}</span>
+        <br>
+        <span>{{ time }}</span>
       </div>
       <div class="content-img">
         <img :src="active_img" alt="">
-        <span>{{ time }}</span>
       </div>
     </div>
   </div>
@@ -29,17 +30,18 @@ export default {
 .active {
   max-width: 450px;
   margin: 0 auto 0 auto;
+
 }
 
 .content-box {
   display: flex;
   border-radius: 20px;
   max-width: 450px;
-  height: 150px;
+  height: 140px;
   margin: 0 20px 15px 10px;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
-  background-color: #f8f8f8f8;
+  background-color: rgba(204, 204, 204, 0.29);
 
   .content-font {
     padding: 5px 0 0 12px;
@@ -47,7 +49,7 @@ export default {
 
     span {
       font-size: 12px;
-      color: #ccc;
+      color: #333333;
     }
   }
 

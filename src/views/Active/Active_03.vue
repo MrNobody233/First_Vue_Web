@@ -1,5 +1,20 @@
 <template>
   <div class="active">
+    <van-notice-bar left-icon="volume-o" :scrollable="false"  color="#1989fa"  background="#ecf9ff"      mode="closeable"  speed="100">
+      <van-swipe
+          vertical
+          class="notice-swipe"
+          :autoplay="3000"
+          :show-indicators="false"
+      >
+        <van-swipe-item>病毒无情，人间有情</van-swipe-item>
+        <van-swipe-item>疫情终会过去，静候春暖花开</van-swipe-item>
+        <van-swipe-item>抗击疫情，人人有责</van-swipe-item>
+        <van-swipe-item>齐心合力，共康疫情</van-swipe-item>
+
+
+      </van-swipe>
+    </van-notice-bar>
     <span class="mafan">
       年度总结
     </span>
@@ -132,6 +147,11 @@ export default {
   text-align: center;
   background: url("../../assets/Activity/background01.png");
   background-size: 100%;
+
+  .notice-swipe {
+    height: 40px;
+    line-height: 40px;
+  }
 
   .mafan {
     font-size: 36px;

@@ -1,5 +1,16 @@
 <template>
   <div class="activity">
+    <van-notice-bar left-icon="volume-o" :scrollable="false" scrollable  color="#1989fa"  background="#ecf9ff"      mode="closeable"  speed="100">
+      <van-swipe
+          vertical
+          class="notice-swipe"
+          :autoplay="3000"
+          :show-indicators="false"
+      >
+        <van-swipe-item>勤洗手，戴口罩，常通风，多消毒，有症状，早就医，讲卫生，多锻炼，少出行，少聚集，多理解，多配合，需警惕，不恐慌，疫情防控，切勿松懈。</van-swipe-item>
+      </van-swipe>
+    </van-notice-bar>
+
     <h3>江西科技学院第四届轮式机器人竞速赛</h3>
     <i class="el-icon-date">2021-12-13</i>
     <p>
@@ -77,11 +88,15 @@ export default {
 
 <style scoped lang="less">
 
+.notice-swipe {
+  height: 40px;
+  line-height: 40px;
+}
 /*活动区*/
 .activity {
   text-align: center;
   max-width: 450px;
-  margin: 60px auto 0 auto;
+  margin: 46px auto 0 auto;
 
   h3 {
     font-size: 16px;
