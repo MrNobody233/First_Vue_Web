@@ -160,7 +160,7 @@ body {
 }
 .talk_list .left_word span {
   float: left;
-  background-color: #fe9697;
+  background-color: #5c91fb;
   padding: 10px 15px;
   max-width: 290px;
   border-radius: 12px;
@@ -256,7 +256,7 @@ body {
   width: 70px;
   height: 37px;
   border: 0;
-  background-color: #fe9697;
+  background-color: #5c91fb;
   margin: 9px 0 0 15px;
   border-radius: 8px;
   padding: 0;

@@ -22,16 +22,46 @@
         :with-header="false"
         size="200px"
     >
+      <!--  抽屉    -->
       <van-cell-group class="action-card">
         <div class="v-cell_box">
           <van-cell icon="chat-o" title="小思同学" is-link to="/robot"/>
           <van-cell icon="user-circle-o" title="关于我们" is-link to="/about"/>
           <van-cell icon="envelop-o" title="联系我们" to="/contact" is-link/>
           <van-cell icon="home-o" title="返回主页" is-link to="/"/>
+          <!--          <van-cell icon="flower-o" title="友情链接" is-link to="/"/>-->
           <van-cell icon="like-o" title="我的学校" is-link url="https://www.jxut.edu.cn/"/>
+
+          <van-collapse v-model="activeNames">
+            <van-collapse-item icon="flower-o" title="友情链接" right-icon="arrow" name="1">
+              <!--              <van-cell icon="like-o" title="我的博客" url="https://MrNobody233.github.io"/>-->
+              <!--              <van-cell icon="like-o" title="社恐废宅的博客" url="https://MrNobody233.github.io"/>-->
+              <!--              <van-cell icon="like-o" title="胃痛患者的博客" url="https://MrNobody233.github.io"/>-->
+              <!--              <van-cell icon="like-o" title="Fish的博客" url="https://MrNobody233.github.io"/>-->
+              <a href="https://MrNobody233.github.io">
+                <van-icon name="star-o"/> &nbsp;我的博客
+              </a>
+
+              <a href="https://charet.github.io/">
+                <van-icon name="star-o"/> &nbsp;社恐废宅的博客
+              </a>
+
+              <a href="https://thirsty-c.github.io/">
+                <van-icon name="star-o"/> 胃痛患者的博客
+              </a>
+
+              <a href="https://fish214057.github.io/">
+                <van-icon name="star-o"/>&nbsp;Fish的博客
+              </a>
+
+              <a href="https://MrNobody233.github.io">
+                <van-icon name="star-o"/>&nbsp;果果超甜的博客
+              </a>
+
+            </van-collapse-item>
+          </van-collapse>
         </div>
         <div class="bottom_box">
-
           <img src="./assets/gzh.png" alt="">
           <br>
           <span>扫码关注蓝色技术公众号</span>
@@ -48,6 +78,7 @@ export default {
     return {
       active: 0,
       drawer: false,
+      activeNames: ['0'],
     };
   },
   methods: {
@@ -90,7 +121,6 @@ export default {
 
 // 侧边栏距离顶部
 .v-cell_box {
-  margin-top: 30%;
 }
 
 // 公众号部分
@@ -107,5 +137,13 @@ export default {
 .bottom_box img {
   border-radius: 1px;
   width: 70%;
+}
+
+.van-collapse-item__content {
+  a {
+    display: block;
+    color: black;
+    padding-bottom: 7px;
+  }
 }
 </style>
