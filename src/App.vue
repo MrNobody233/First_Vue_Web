@@ -1,7 +1,5 @@
 <template>
-
   <div class="App_box">
-
     <!-- 头部导航 -->
     <van-nav-bar title="蓝色技术工作室" left-text="返回" fixed style="">
       <template #left>
@@ -28,10 +26,8 @@
           <van-cell icon="chat-o" title="小思同学" is-link to="/robot"/>
           <van-cell icon="user-circle-o" title="关于我们" is-link to="/about"/>
           <van-cell icon="envelop-o" title="联系我们" to="/contact" is-link/>
-          <van-cell icon="home-o" title="返回主页" is-link to="/"/>
-          <!--          <van-cell icon="flower-o" title="友情链接" is-link to="/"/>-->
-          <van-cell icon="like-o" title="我的学校" is-link url="https://www.jxut.edu.cn/"/>
 
+          <!--          <van-cell icon="flower-o" title="友情链接" is-link to="/"/>-->
           <van-collapse v-model="activeNames">
             <van-collapse-item icon="flower-o" title="友情链接" right-icon="arrow" name="1">
               <!--              <van-cell icon="like-o" title="我的博客" url="https://MrNobody233.github.io"/>-->
@@ -60,6 +56,9 @@
 
             </van-collapse-item>
           </van-collapse>
+          <van-cell icon="like-o" title="我的学校" is-link url="https://www.jxut.edu.cn/"/>
+          <van-cell icon="home-o" title="返回主页" is-link to="/"/>
+
         </div>
         <div class="bottom_box">
           <img src="./assets/gzh.png" alt="">

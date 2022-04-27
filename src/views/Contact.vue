@@ -15,19 +15,15 @@
         </div>
         <!--  公众号  -->
         <div class="gzh_box">
-
           <img src="../assets/gzh.png" alt="">
           <p>BST公众号</p>
         </div>
       </div>
-      <br><br><br><br><br><br><br>
-      <router-link to="/" class="back_home">返回首页 ></router-link>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>><br><br><br>
+      <p class="bottom_font">© 2011 - 2022 ☆ 蓝色技术工作室</p>
     </div>
-
-    <footer class="bottom_box">
-      <p>© 2011 - 2022 ☆ 蓝色技术工作室</p>
-    </footer>
   </div>
+
 </template>
 
 <script>
@@ -37,15 +33,16 @@ export default {
 </script>
 
 <style scoped lang="less">
-
 .contact_box {
   margin-top: 46px;
+  height: 120%;
+  background-color: #333333;
 }
 
 .top_box {
   margin: 0 auto;
   max-width: 450px;
-  height: 600px;
+  height: 100%;
   background-color: #333333;
 
   h3:nth-child(1) {
@@ -89,14 +86,16 @@ export default {
 }
 
 //公众号
-.gzh_box{
+.gzh_box {
   text-align: center;
   padding-top: 60%;
   color: white;
-  img{
+
+  img {
     width: 100px;
   }
 }
+
 .back_home {
   color: white;
   text-decoration: underline;
@@ -104,12 +103,19 @@ export default {
 
 }
 
-.bottom_box {
-  width: 100%;
-  position: absolute;
-  bottom: 0;
+.bottom_font {
   text-align: center;
-  color: gray;
-  font-size: 15px;
+  color: white;
 }
+
+img {
+  transition: .3s all ease;
+}
+
+img:hover {
+  transition: .3s all ease;
+  width: 115px;
+}
+
+
 </style>

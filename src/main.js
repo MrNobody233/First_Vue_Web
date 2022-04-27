@@ -9,11 +9,13 @@ import 'vant/lib/index.css';
 // ele
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
+// 全局样式
+import './css/quanju.css'
 
 Vue.config.productionTip = false
 Vue.use(Vant);
 Vue.use(ElementUI);
 new Vue({
-  router,
-  render: h => h(App)
+    router,
+    render: h => h(App)
 }).$mount('#app')
