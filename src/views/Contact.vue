@@ -19,7 +19,7 @@
           <p>BST公众号</p>
         </div>
       </div>
-      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>>
       <p class="bottom_font">© 2011 - 2022 ☆ 蓝色技术工作室</p>
     </div>
   </div>
