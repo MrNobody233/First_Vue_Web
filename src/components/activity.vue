@@ -99,20 +99,20 @@ export default {
 //==============
 
 .activeBox {
-  background-color: #ffffff;
+  background-color: #fff;
   width: 350px;
   height: 500px;
-  margin: 10px auto;
+  margin: 10px auto 20px auto;
   display: flex;
   flex-direction: column;
 
   .imgBox {
+    height: 270px;
     flex: 1;
-
-
     img {
       width: 100%;
       height: 100%;
+      border-radius: 15px;
     }
   }
 
@@ -132,8 +132,6 @@ export default {
     }
 
     .fontBox {
-
-
       p {
         padding-top: 10px;
         padding-left: 15px;
